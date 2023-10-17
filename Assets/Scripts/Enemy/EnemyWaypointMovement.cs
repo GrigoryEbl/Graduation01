@@ -6,6 +6,8 @@ public class EnemyWaypointMovement : MonoBehaviour
     [SerializeField] private float _speed;
     [SerializeField] private Scaner scaner;
     [SerializeField] private float _seeBackDistance;
+    [SerializeField] private Rigidbody2D _body;
+
 
     private Transform[] _points;
     private int _currentPoint;
@@ -22,7 +24,7 @@ public class EnemyWaypointMovement : MonoBehaviour
         _player = FindObjectOfType<Player>().transform;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         _target = _points[_currentPoint];
 

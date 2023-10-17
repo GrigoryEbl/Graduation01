@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a31f5d9833283114f841cfa541568346
+guid: 6500db9c242155141910d16a147f8dfc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 40
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -127,112 +127,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_0"
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 248
-        width: 50
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2d5306c00618be64f8dff23e3fbf9f94
-      internalID: 703781146
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_1"
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 252
-        width: 50
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52ec29fcea2c2b043b327d73d43f7d78
-      internalID: 1925060285
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_2"
-      rect:
-        serializedVersion: 2
-        x: 114
-        y: 254
-        width: 50
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 14ca63771508cf64d8a7f36c8a0dd394
-      internalID: -1375054395
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_3"
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 252
-        width: 50
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1cd6ebefdda05a0469328234f5f21162
-      internalID: 226430545
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_4"
-      rect:
-        serializedVersion: 2
-        x: 222
-        y: 250
-        width: 50
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e91d1d4f858c48b49927c7329ef27c3b
-      internalID: -1688756294
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -243,12 +138,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_0": 703781146
-      "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_4": -1688756294
-      "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_3": 226430545
-      "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_2": -1375054395
-      "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_1": 1925060285
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

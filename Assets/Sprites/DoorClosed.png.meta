@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a31f5d9833283114f841cfa541568346
+guid: 8b3248233eb7ad34a9b6abd37098c4f5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 40
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,106 +129,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_0"
+      name: DoorClosed_1
       rect:
         serializedVersion: 2
-        x: 4
-        y: 248
-        width: 50
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 167
+        y: 68
+        width: 62
+        height: 32
+      alignment: 9
+      pivot: {x: 0.49608514, y: 0.974061}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d5306c00618be64f8dff23e3fbf9f94
-      internalID: 703781146
+      spriteID: 4fdd59cb291164742baf86333f70fb57
+      internalID: 314778287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_1"
+      name: DoorClosed_3
       rect:
         serializedVersion: 2
-        x: 60
-        y: 252
-        width: 50
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 229
+        y: 33
+        width: 74
+        height: 67
+      alignment: 9
+      pivot: {x: 0.49350306, y: 0.9843413}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52ec29fcea2c2b043b327d73d43f7d78
-      internalID: 1925060285
+      spriteID: 824a89c334309eb4ca4ceae67cf55c68
+      internalID: 1988046528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_2"
+      name: DoorClosed_6
       rect:
         serializedVersion: 2
-        x: 114
-        y: 254
-        width: 50
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 319
+        y: 11
+        width: 91
+        height: 89
+      alignment: 9
+      pivot: {x: 0.49847615, y: 0.9923919}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14ca63771508cf64d8a7f36c8a0dd394
-      internalID: -1375054395
+      spriteID: a2a984af1cdf495478f8dbb382812c47
+      internalID: -988482648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_3"
+      name: DoorClosed_8
       rect:
         serializedVersion: 2
-        x: 168
-        y: 252
-        width: 50
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 431
+        y: 0
+        width: 64
+        height: 100
+      alignment: 9
+      pivot: {x: 0.50784063, y: 0.9982531}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cd6ebefdda05a0469328234f5f21162
-      internalID: 226430545
+      spriteID: 74a6536c74486f046a8090ae20c3267f
+      internalID: -1066394240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_4"
+      name: DoorClosed_0
       rect:
         serializedVersion: 2
-        x: 222
-        y: 250
-        width: 50
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 95
+        y: 69
+        width: 52
+        height: 30
+      alignment: 9
+      pivot: {x: 0.50277287, y: 0.9902372}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e91d1d4f858c48b49927c7329ef27c3b
-      internalID: -1688756294
+      spriteID: 79c2cb2cf53c607418ce410a4159da29
+      internalID: -570305899
       vertices: []
       indices: 
       edges: []
@@ -244,11 +244,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_0": 703781146
-      "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_4": -1688756294
-      "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_3": 226430545
-      "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_2": -1375054395
-      "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_1": 1925060285
+      DoorClosed_7: 1348467892
+      DoorClosed_0: -570305899
+      DoorClosed_2: 1260330992
+      DoorClosed_1: 314778287
+      DoorClosed_3: 1988046528
+      DoorClosed_8: -1066394240
+      DoorClosed_5: 213452278
+      DoorClosed_4: -987881693
+      DoorClosed_6: -988482648
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
