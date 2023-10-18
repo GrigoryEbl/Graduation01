@@ -5,8 +5,6 @@ public class EnemyWaypointMovement : MonoBehaviour
     [SerializeField] private Transform _path;
     [SerializeField] private float _speed;
     [SerializeField] private Scaner scaner;
-    [SerializeField] private float _seeBackDistance;
-    [SerializeField] private Rigidbody2D _body;
 
 
     private Transform[] _points;
@@ -46,7 +44,7 @@ public class EnemyWaypointMovement : MonoBehaviour
 
     private void DetectingPlayer()
     {
-        if (scaner.Scan() || Vector3.Distance(transform.position, _player.transform.position) < _seeBackDistance)
+        if (scaner.Scan())
         {
             _target = _player.transform;
         }
