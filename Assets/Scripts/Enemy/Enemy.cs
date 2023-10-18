@@ -12,12 +12,11 @@ public class Enemy : MonoBehaviour
 
     private Player _target;
     private float _lastAttackTime;
-    private bool _isAttacking;
 
     private void Start()
     {
         _target = FindObjectOfType<Player>();
-        _lightning = FindObjectOfType<Lightning>();
+        _lightning = GetComponentInChildren<Lightning>();
     }
 
     private void Update()
@@ -26,12 +25,9 @@ public class Enemy : MonoBehaviour
         {
             if (_lastAttackTime <= 0)
             {
-                _isAttacking = true;
                 Attack(_target);
                 _lastAttackTime = _delay;
             }
-
-            _isAttacking = false;
         }
 
         _lastAttackTime -= Time.deltaTime;
@@ -39,8 +35,10 @@ public class Enemy : MonoBehaviour
 
     private void Attack(Player target)
     {
+        _lightning.Strike();
+
         target.ApplyDamage(_damage);
+
         _lightning.transform.up = _target.transform.position * -1 + _lightning.transform.position;
-        _lightning.Strike(_isAttacking);       
     }
 }

@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class Lightning : MonoBehaviour
 {
-    private Animator _animator;
+    [SerializeField] private Animator _animator;
+
+    private string _animStrike = "Strike";
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
     }
 
-    public void Strike(bool isAttack)
+    public void Strike()
     {
-        if (isAttack) 
-        _animator.Play("Strike");
+        _animator.Play(_animStrike);
     }
 }

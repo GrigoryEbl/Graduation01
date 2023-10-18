@@ -35,7 +35,7 @@ public class Mover : MonoBehaviour
     private void FixedUpdate()
     {
         _isGrounded = Physics2D.OverlapCircle(_groundCheckPoint.transform.position, _groundCheckRadius, _groundLayer);
-    
+
         if (_isGrounded == true)
             State = States.idle;
 
@@ -65,7 +65,7 @@ public class Mover : MonoBehaviour
     private void Jump()
     {
         if (_isGrounded == true)
-         _body.velocity = new Vector2(0, _jumpForce);
+            _body.velocity = new Vector2(0, _jumpForce);
 
         if (_isGrounded == false)
             State = States.jump;

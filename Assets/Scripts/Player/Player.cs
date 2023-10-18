@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
         Died?.Invoke();
     }
 }
