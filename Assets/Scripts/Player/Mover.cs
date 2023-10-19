@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
@@ -39,7 +40,7 @@ public class Mover : MonoBehaviour
         if (_isGrounded == true)
             State = States.idle;
 
-        if (Input.GetButton("Vertical"))
+        if (Input.GetButton("Jump"))
             Jump();
 
         if (Input.GetButton("Horizontal"))
@@ -48,7 +49,7 @@ public class Mover : MonoBehaviour
             _currentSpeed = 0;
     }
 
-    private void Run()
+    public void Run()
     {
         _currentSpeed = _targetSpeed;
 
@@ -62,7 +63,7 @@ public class Mover : MonoBehaviour
         _spriteRenderer.flipX = direction.x < 0;
     }
 
-    private void Jump()
+    public void Jump()
     {
         if (_isGrounded == true)
             _body.velocity = new Vector2(0, _jumpForce);
