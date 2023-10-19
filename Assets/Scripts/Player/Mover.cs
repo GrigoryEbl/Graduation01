@@ -11,14 +11,14 @@ public class Mover : MonoBehaviour
     [SerializeField] private Rigidbody2D _body;
     [SerializeField] private GameObject _groundCheckPoint;
     [SerializeField] private LayerMask _groundLayer;
-    [SerializeField] private float _targetSpeed;
     [SerializeField] private float _jumpForce;
 
-    private Animator _animator;
     private SpriteRenderer _spriteRenderer;
-    private float _currentSpeed;
+    private Animator _animator;
+    private float _speed;
     private float _groundCheckRadius = 0.1f;
     private bool _isGrounded;
+    public float _normalSpeed;
 
     private States State
     {
@@ -37,39 +37,55 @@ public class Mover : MonoBehaviour
     {
         _isGrounded = Physics2D.OverlapCircle(_groundCheckPoint.transform.position, _groundCheckRadius, _groundLayer);
 
-        if (_isGrounded == true)
+        _body.velocity = new Vector2(_speed, _body.velocity.y);
+
+        if (_isGrounded && _speed == 0)
             State = States.idle;
-
-        if (Input.GetButton("Jump"))
-            Jump();
-
-        if (Input.GetButton("Horizontal"))
-            Run();
-        else
-            _currentSpeed = 0;
+        else if(!_isGrounded)
+            State = States.jump;
     }
 
-    public void Run()
-    {
-        _currentSpeed = _targetSpeed;
-
-        if (_isGrounded == true)
-            State = States.run;
-
-        Vector3 direction = transform.right * Input.GetAxis("Horizontal");
-
-        transform.position = Vector3.MoveTowards(transform.position, transform.position + direction, _currentSpeed * Time.deltaTime);
-
-        _spriteRenderer.flipX = direction.x < 0;
-    }
-
-    public void Jump()
+    private void Jump()
     {
         if (_isGrounded == true)
-            _body.velocity = new Vector2(0, _jumpForce);
+            _body.velocity = new Vector2(_body.velocity.x, _jumpForce);
 
         if (_isGrounded == false)
             State = States.jump;
+    }
+
+    public void OnLeftButtonDown()
+    {
+        if (_speed >= 0f)
+        {
+            State = States.run;
+            _speed = -_normalSpeed;
+            Flip();
+        }
+    }
+    public void OnRightButtonDown()
+    {
+        if (_speed <= 0f)
+        {
+            State = States.run;
+            _speed = _normalSpeed;
+            Flip();
+        }
+    }
+
+    public void OnJumpButtonDown()
+    {
+        Jump();
+    }
+
+    public void OnButtonUp()
+    {
+        _speed = 0f;
+    }
+
+    private void Flip()
+    {
+        _spriteRenderer.flipX = _speed < 0;
     }
 }
 
