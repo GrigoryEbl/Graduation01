@@ -2870,7 +2870,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 7.1364512}
+  m_Offset: {x: 0, y: 10.694583}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2881,7 +2881,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 15.2729025}
+  m_Size: {x: 1, y: 22.389166}
   m_EdgeRadius: 0
 --- !u!253 &6239149462849918000
 BuoyancyEffector2D:
@@ -2895,7 +2895,7 @@ BuoyancyEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_SurfaceLevel: 14
+  m_SurfaceLevel: 18.86
   m_Density: 4
   m_LinearDrag: 0
   m_AngularDrag: 0
@@ -2985,7 +2985,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2.94
+      scalar: 1.6
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -3154,7 +3154,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.04
+      scalar: 0.01
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -6957,7 +6957,7 @@ ParticleSystem:
     widthOverTrail:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 2
       minScalar: 1
       maxCurve:
         serializedVersion: 2

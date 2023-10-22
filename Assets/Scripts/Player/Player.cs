@@ -1,12 +1,16 @@
+using ControllForPC;
+using ControllForPhone;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
     [SerializeField] private int _health;
+
+    private MoverForPC _moverForPC;
+    private MoverForPhones _moverForPhones;
 
     public event UnityAction<int> HealthChanged;
     public event UnityAction Died;
@@ -14,6 +18,8 @@ public class Player : MonoBehaviour
     private void Start()
     {
         HealthChanged?.Invoke(_health);
+        _moverForPC = GetComponent<MoverForPC>();
+        _moverForPhones = GetComponent<MoverForPhones>();
     }
 
     public void ApplyDamage(int damage)
@@ -23,15 +29,15 @@ public class Player : MonoBehaviour
 
         if (_health <= 0)
         {
-            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-            spriteRenderer.color = Color.red;
             Die();
-        }            
+        }
     }
 
     public void Die()
     {
-        gameObject.SetActive(false);
         Died?.Invoke();
+
+        _moverForPC.enabled = false;
+        _moverForPhones.enabled = false;
     }
 }

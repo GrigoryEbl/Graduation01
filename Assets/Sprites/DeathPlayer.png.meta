@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 67bc2b71660dffc4bbfe88302b06908e
+guid: 2a37e9fae83275e43a5b23b1e1a2cc76
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 25
+  spritePixelsToUnits: 30
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,7 +139,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: DeathPlayer_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 79
+        width: 34
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 682d2f744d06d104abd6a9f2a2abb829
+      internalID: 940793314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathPlayer_1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 79
+        width: 34
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55382eff3e1c638469009be51de76256
+      internalID: 519522749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathPlayer_2
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 54
+        width: 34
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27eeec00ad8897e42be52057a782c599
+      internalID: -1861644416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathPlayer_3
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 49
+        width: 34
+        height: 26
+      alignment: 9
+      pivot: {x: 0.49356213, y: 0.2853216}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 507781d25cd0f6242ad55fcf813a9f61
+      internalID: 1384480646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathPlayer_5
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 15
+        width: 42
+        height: 22
+      alignment: 9
+      pivot: {x: 0.5498481, y: 0.4388231}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 251f1745229bbb145ae0bd27052fac36
+      internalID: -1472670023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -150,7 +255,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DeathPlayer_2: -1861644416
+      DeathPlayer_1: 519522749
+      DeathPlayer_5: -1472670023
+      DeathPlayer_4: 806932850
+      DeathPlayer_3: 1384480646
+      DeathPlayer_0: 940793314
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
