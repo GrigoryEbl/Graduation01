@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 2607929774615756130}
   - component: {fileID: 1035477469981046593}
   - component: {fileID: 1035477469981046599}
+  - component: {fileID: 1368439439}
   m_Layer: 6
   m_Name: Player01
   m_TagString: Player
@@ -110,7 +111,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 2009899679, guid: d1eb60b26f3125b4e9dbd5d206dec49b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -196,7 +197,7 @@ MonoBehaviour:
   _groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  _targetSpeed: 0
+  _targetSpeed: 3
   _jumpForce: 6
 --- !u!114 &1035477469981046593
 MonoBehaviour:
@@ -229,4 +230,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe41d7ef536133447a266bb070508be2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 5
+  _health: 3
+  _showerCountItems: {fileID: 0}
+  _finalTrigger: {fileID: 0}
+--- !u!114 &1368439439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035477469981046606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f502bfd10f5b324419008c9d9d540114, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panel: {fileID: 0}

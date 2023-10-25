@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class ModificatoinStation : MonoBehaviour
 {
-
     private Animator _animator;
     private ParticleSystem _particleSystem;
+   
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
         _particleSystem = GetComponent<ParticleSystem>();
-
+       
         _animator.enabled = false;
         _particleSystem.Stop();
     }

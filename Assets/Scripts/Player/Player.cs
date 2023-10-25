@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private int _health;
     [SerializeField] private ShowerCurrentNumberItems _showerCountItems;
+    [SerializeField] private FinalTrigger _finalTrigger;
 
     private MoverForPC _moverForPC;
     private MoverForPhones _moverForPhones;
@@ -26,7 +27,9 @@ public class Player : MonoBehaviour
         _moverForPC = GetComponent<MoverForPC>();
         _moverForPhones = GetComponent<MoverForPhones>();
         _showerCountItems = FindObjectOfType<ShowerCurrentNumberItems>();
+        _finalTrigger = FindObjectOfType<FinalTrigger>();
 
+        _showerCountItems.ShowCountItems(_countItems);
     }
 
     public void ApplyDamage(int damage)
@@ -47,7 +50,6 @@ public class Player : MonoBehaviour
         _moverForPC.enabled = false;
         _moverForPhones.enabled = false;
     }
-    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -58,5 +60,21 @@ public class Player : MonoBehaviour
             collectedItem.Collect();
             Collect?.Invoke();
         }
+    }
+
+    private void OnEnable()
+    {
+        _finalTrigger.Final += Modify;
+    }
+
+    private void OnDisable()
+    {
+        _finalTrigger.Final -= Modify;
+    }
+
+    private void Modify()
+    {
+        _moverForPC.enabled = false;
+        _moverForPhones.enabled = false;
     }
 }

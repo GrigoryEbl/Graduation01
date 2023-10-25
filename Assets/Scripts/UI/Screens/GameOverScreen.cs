@@ -15,7 +15,7 @@ public class GameOverScreen : MonoBehaviour
     public void Restart()
     {
         _panel.SetActive(false);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Exit()
