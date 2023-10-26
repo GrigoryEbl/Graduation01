@@ -505,6 +505,7 @@ GameObject:
   - component: {fileID: 1035477469981046593}
   - component: {fileID: 1035477469981046599}
   - component: {fileID: 1368439439}
+  - component: {fileID: 4500940077319544858}
   m_Layer: 6
   m_Name: Player01
   m_TagString: Player
@@ -693,6 +694,7 @@ MonoBehaviour:
   _showerCountItems: {fileID: 0}
   _finalTrigger: {fileID: 0}
   _legs: {fileID: 766552049}
+  _passedScreen: {fileID: 4500940077319544858}
 --- !u!114 &1368439439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -706,6 +708,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _panel: {fileID: 0}
+--- !u!114 &4500940077319544858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035477469981046606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5d6bafe7361c33459a51db4133a673d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _passedPanel: {fileID: 0}
+  _calculateScores: {fileID: 0}
+  _text: {fileID: 0}
+  _healthBar: {fileID: 0}
+  _moveButtons: {fileID: 0}
+  _openPauseMenuButton: {fileID: 0}
+  _showCollectIblesPanel: {fileID: 0}
 --- !u!1 &7070951567762037292
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,7 +752,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7070951567762037292}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.03, y: -0.03, z: 0.44}
+  m_LocalPosition: {x: 0.12, y: -0.05, z: 0.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

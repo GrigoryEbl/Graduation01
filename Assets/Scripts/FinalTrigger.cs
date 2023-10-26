@@ -5,8 +5,6 @@ using UnityEngine.Events;
 
 public class FinalTrigger : MonoBehaviour
 {
-    [SerializeField] private GameObject _canvas;
-
     private Animator _animator;
 
     public event UnityAction Final;
@@ -22,7 +20,6 @@ public class FinalTrigger : MonoBehaviour
         if (collision.TryGetComponent(out Player player))
         {
             Final?.Invoke();
-            _canvas.SetActive(false);
             _animator.enabled = true;
         }
     }

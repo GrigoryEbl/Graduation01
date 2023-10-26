@@ -11,12 +11,15 @@ public class Player : MonoBehaviour
     [SerializeField] private ShowerCurrentNumberItems _showerCountItems;
     [SerializeField] private FinalTrigger _finalTrigger;
     [SerializeField] private GameObject _legs;
+    [SerializeField] private PassedScreen _passedScreen;
 
     private MoverForPC _moverForPC;
     private MoverForPhones _moverForPhones;
-    private int _countItems = 0;
+    private int _countCollectibles = 0;
 
-    public int CountItems => _countItems;
+    public int CountCollectibles => _countCollectibles;
+
+    public int CountItems => _countCollectibles;
 
     public event UnityAction<int> HealthChanged;
     public event UnityAction Died;
@@ -29,8 +32,9 @@ public class Player : MonoBehaviour
         _moverForPhones = GetComponent<MoverForPhones>();
         _showerCountItems = FindObjectOfType<ShowerCurrentNumberItems>();
         _finalTrigger = FindObjectOfType<FinalTrigger>();
+        _passedScreen = FindObjectOfType<PassedScreen>();
 
-        _showerCountItems.ShowCountItems(_countItems);
+        _showerCountItems.ShowCountItems(_countCollectibles);
         _legs.SetActive(false);
     }
 
@@ -57,8 +61,8 @@ public class Player : MonoBehaviour
     {
         if(collision.TryGetComponent<CollectedItem>(out CollectedItem collectedItem))
         {
-            _countItems += 1;
-            _showerCountItems.ShowCountItems(_countItems);
+            _countCollectibles += 1;
+            _showerCountItems.ShowCountItems(_countCollectibles);
             collectedItem.Collect();
             Collect?.Invoke();
         }

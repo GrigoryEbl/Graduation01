@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eb79cef869a16134fad5501bf3eafad7
+guid: b353788fd43c9d54d9570895a6e12523
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 80.3
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -102,6 +102,30 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -117,38 +141,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DataCollect_0
+      name: Button_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 128
-        height: 128
+        x: 454
+        y: 220
+        width: 500
+        height: 232
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -8, y: -4}
-        - {x: -8, y: 8}
-        - {x: -12, y: 8}
-        - {x: -12, y: 52}
-        - {x: -8, y: 52}
-        - {x: -8, y: 56}
-        - {x: -4, y: 56}
-        - {x: -4, y: 60}
-        - {x: 24, y: 60}
-        - {x: 24, y: 56}
-        - {x: 28, y: 56}
-        - {x: 28, y: 52}
-        - {x: 32, y: 52}
-        - {x: 32, y: 8}
-        - {x: 28, y: 8}
-        - {x: 28, y: -4}
+      outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f86461db01520914faee3d9c9c6be8c9
-      internalID: 1959040113
+      spriteID: b0412c1f5d8624145aabfe40c94e5634
+      internalID: 1607408727
       vertices: []
       indices: 
       edges: []
@@ -157,14 +165,14 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DataCollect_0: 1959040113
+      Button_0: 1607408727
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
