@@ -11,7 +11,7 @@ public class FinalTrigger : MonoBehaviour
 
     public event UnityAction Final;
 
-    private void Start()
+    private void Awake()
     {
         _animator = GetComponent<Animator>();
         _animator.enabled = false;
@@ -19,7 +19,7 @@ public class FinalTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<Player>(out Player player))
+        if (collision.TryGetComponent(out Player player))
         {
             Final?.Invoke();
             _canvas.SetActive(false);

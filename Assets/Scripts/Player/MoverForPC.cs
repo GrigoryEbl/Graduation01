@@ -11,6 +11,7 @@ namespace ControllForPC
         [SerializeField] private LayerMask _groundLayer;
         [SerializeField] private float _targetSpeed;
         [SerializeField] private float _jumpForce;
+        [SerializeField] private FinalTrigger _finalTrigger;
 
         private Animator _animator;
         private SpriteRenderer _spriteRenderer;
@@ -31,6 +32,7 @@ namespace ControllForPC
             _animator = GetComponent<Animator>();
             _spriteRenderer = GetComponent<SpriteRenderer>();
             _player = GetComponent<Player>();
+            _finalTrigger = FindObjectOfType<FinalTrigger>();
         }
 
         private void FixedUpdate()
@@ -87,16 +89,23 @@ namespace ControllForPC
         private void OnEnable()
         {
             _player.Died += OnDied;
+            _finalTrigger.Final += OnFinal;
         }
 
         private void OnDisable()
         {
             _player.Died -= OnDied;
+            _finalTrigger.Final -= OnFinal;
         }
 
         private void OnDied()
         {
             State = States.death;
+        }
+
+        private void OnFinal()
+        {
+            State = States.modify;
         }
     }
 
@@ -105,7 +114,8 @@ namespace ControllForPC
         idle,
         run,
         jump,
-        death
+        death,
+        modify
     }
 }
 

@@ -6,20 +6,23 @@ public class ModificatoinStation : MonoBehaviour
 {
     private Animator _animator;
     private ParticleSystem _particleSystem;
+    private FinalTrigger _finalTrigger;
    
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
         _particleSystem = GetComponent<ParticleSystem>();
+        _finalTrigger = GetComponentInChildren<FinalTrigger>(); 
        
-        _animator.enabled = false;
         _particleSystem.Stop();
+        _finalTrigger.enabled = false;
     }
 
     public void Activate()
     {
-        _animator.enabled = true;
+        _animator.Play("Flicker");
         _particleSystem.Play();
+        _finalTrigger.enabled = true;
     }
 }

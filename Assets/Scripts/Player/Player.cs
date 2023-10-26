@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] private int _health;
     [SerializeField] private ShowerCurrentNumberItems _showerCountItems;
     [SerializeField] private FinalTrigger _finalTrigger;
+    [SerializeField] private GameObject _legs;
 
     private MoverForPC _moverForPC;
     private MoverForPhones _moverForPhones;
@@ -30,6 +31,7 @@ public class Player : MonoBehaviour
         _finalTrigger = FindObjectOfType<FinalTrigger>();
 
         _showerCountItems.ShowCountItems(_countItems);
+        _legs.SetActive(false);
     }
 
     public void ApplyDamage(int damage)
@@ -76,5 +78,6 @@ public class Player : MonoBehaviour
     {
         _moverForPC.enabled = false;
         _moverForPhones.enabled = false;
+        _legs.SetActive(true);
     }
 }
