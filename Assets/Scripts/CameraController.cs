@@ -21,10 +21,5 @@ public class CameraController : MonoBehaviour
         _target.z -= 10;
         _target.y += 1;
         transform.position = Vector3.Lerp(transform.position, _target, Time.deltaTime * _speed);
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
     }
 }

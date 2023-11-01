@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject _panel;
+
     public void OpenPanel()
     {
         _panel.SetActive(true);
@@ -21,11 +22,13 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1.0f;
     }
 
     public void Exit()
     {
-        Application.Quit();
+        SceneManager.LoadScene(0);
+        Time.timeScale = 1.0f;
     }
 }

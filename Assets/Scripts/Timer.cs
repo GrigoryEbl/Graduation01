@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -6,6 +7,7 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     [SerializeField] private TMP_Text _text;
+
     private float _time = 0;
     private bool _isStart = false;
 
@@ -32,7 +34,7 @@ public class Timer : MonoBehaviour
     public void PauseTimer()
     {
         _isStart = false;
-        _text.text = _time.ToString();
+        _text.text = "Time: " + _time.ToString() + "s";
     }
 
     public void StopTimer()

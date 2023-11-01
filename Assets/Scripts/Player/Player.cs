@@ -14,7 +14,6 @@ public class Player : MonoBehaviour
     [SerializeField] private PassedScreen _passedScreen;
 
     private MoverForPC _moverForPC;
-    private MoverForPhones _moverForPhones;
     private int _countCollectibles = 0;
 
     public int CountCollectibles => _countCollectibles;
@@ -29,7 +28,6 @@ public class Player : MonoBehaviour
     {
         HealthChanged?.Invoke(_health);
         _moverForPC = GetComponent<MoverForPC>();
-        _moverForPhones = GetComponent<MoverForPhones>();
         _showerCountItems = FindObjectOfType<ShowerCurrentNumberItems>();
         _finalTrigger = FindObjectOfType<FinalTrigger>();
         _passedScreen = FindObjectOfType<PassedScreen>();
@@ -52,9 +50,7 @@ public class Player : MonoBehaviour
     public void Die()
     {
         Died?.Invoke();
-
         _moverForPC.enabled = false;
-        _moverForPhones.enabled = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -81,7 +77,6 @@ public class Player : MonoBehaviour
     private void Modify()
     {
         _moverForPC.enabled = false;
-        _moverForPhones.enabled = false;
         _legs.SetActive(true);
     }
 }

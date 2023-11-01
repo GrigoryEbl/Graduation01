@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ControllForPC
 {
-    public class MoverForPC : MonoBehaviour
+    public class MoverForPC : Sounds
     {
         [SerializeField] private Rigidbody2D _body;
         [SerializeField] private GameObject _groundCheckPoint;
@@ -38,6 +38,10 @@ namespace ControllForPC
         private void FixedUpdate()
         {
             _isGrounded = Physics2D.OverlapCircle(_groundCheckPoint.transform.position, _groundCheckRadius, _groundLayer);
+        }
+
+        private void Update()
+        {
 
             if (_isGrounded == true)
                 State = States.idle;
@@ -46,12 +50,14 @@ namespace ControllForPC
                 Jump();
 
             if (Input.GetButton("Horizontal"))
-                Run();
+            {
+                Walk();
+            }
             else
                 _currentSpeed = 0;
         }
 
-        public void Run()
+        public void Walk()
         {
             _currentSpeed = _targetSpeed;
 
@@ -62,6 +68,9 @@ namespace ControllForPC
 
             transform.position = Vector3.MoveTowards(transform.position, transform.position + direction, _currentSpeed * Time.deltaTime);
             _spriteRenderer.flipX = direction.x < 0;
+
+            if(AudioSource.isPlaying == false && _isGrounded)
+            PlaySound(sounds[0]);
         }
 
         private void Jump()
@@ -101,11 +110,17 @@ namespace ControllForPC
         private void OnDied()
         {
             State = States.death;
+            PlaySound(sounds[2]);
         }
 
         private void OnFinal()
         {
             State = States.modify;
+        }
+
+        public void OnSoundTeleportation()
+        {
+            PlaySound(sounds[1]);
         }
     }
 

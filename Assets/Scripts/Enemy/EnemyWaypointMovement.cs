@@ -2,7 +2,7 @@ using UnityEngine;
 
 [RequireComponent (typeof(Scaner))]
 [RequireComponent (typeof(SpriteRenderer))]
-public class EnemyWaypointMovement : MonoBehaviour
+public class EnemyWaypointMovement : Sounds
 {
     [SerializeField] private Transform _path;
     [SerializeField] private float _speed;
@@ -54,6 +54,9 @@ public class EnemyWaypointMovement : MonoBehaviour
         {
             _target = _player.transform;
             _spriteRenderer.sprite = _dangerousSprite;
+
+            if(AudioSource.isPlaying == false)
+            PlaySound(sounds[0],0.5f);
         }
         else
         {

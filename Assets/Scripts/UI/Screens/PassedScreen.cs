@@ -12,7 +12,6 @@ public class PassedScreen : MonoBehaviour
     [SerializeField] private CalculateScores _calculateScores;
     [SerializeField] private TMP_Text _text;
     [SerializeField] private GameObject _healthBar;
-    [SerializeField] private GameObject _moveButtons;
     [SerializeField] private GameObject _openPauseMenuButton;
     [SerializeField] private GameObject _showCollectIblesPanel;
 
@@ -25,11 +24,10 @@ public class PassedScreen : MonoBehaviour
 
     public void Activate()
     {
+        _passedPanel.SetActive(true);
         _healthBar.SetActive(false);
-        _moveButtons.SetActive(false);
         _openPauseMenuButton.SetActive(false);
         _showCollectIblesPanel.SetActive(false);
-        _passedPanel.SetActive(true);
         _score = _calculateScores.Calculate();
 
         _text.text = "Score: " + _score.ToString();
@@ -43,5 +41,6 @@ public class PassedScreen : MonoBehaviour
     public void ReturnHome()
     {
         SceneManager.LoadScene(0);
+        Time.timeScale = 1.0f;
     }
 }

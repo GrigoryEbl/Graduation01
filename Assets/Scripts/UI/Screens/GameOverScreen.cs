@@ -10,16 +10,19 @@ public class GameOverScreen : MonoBehaviour
     public void OpenPanel()
     {
         _panel.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void Restart()
     {
-        _panel.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1.0f;
+        _panel.SetActive(false);
     }
 
     public void Exit()
     {
-        Application.Quit();
+        SceneManager.LoadScene(0);
+        Time.timeScale = 1.0f;
     }
 }

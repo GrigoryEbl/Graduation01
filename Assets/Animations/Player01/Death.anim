@@ -81,7 +81,7 @@ AnimationClip:
   - time: 2
     functionName: OpenPanel
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 11500000, guid: f502bfd10f5b324419008c9d9d540114, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

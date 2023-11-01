@@ -4,25 +4,25 @@ using UnityEngine;
 
 public class ModificatoinStation : MonoBehaviour
 {
-    private Animator _animator;
-    private ParticleSystem _particleSystem;
-    private FinalTrigger _finalTrigger;
-   
+    [SerializeField] private BoxCollider2D _finalTrigger;
+    [SerializeField] private ParticleSystem _particleSystem;
+    [SerializeField] private Animator _animator;
 
-    private void Awake()
+
+    private void Start()
     {
         _animator = GetComponent<Animator>();
         _particleSystem = GetComponent<ParticleSystem>();
-        _finalTrigger = GetComponentInChildren<FinalTrigger>(); 
-       
+        _finalTrigger = GetComponentInChildren<BoxCollider2D>();
+
         _particleSystem.Stop();
         _finalTrigger.enabled = false;
     }
 
     public void Activate()
     {
-        _animator.Play("Flicker");
         _particleSystem.Play();
         _finalTrigger.enabled = true;
+        _animator.Play("Flicker");
     }
 }

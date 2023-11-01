@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : Sounds
 {
     [SerializeField] private float _attackDistance;
     [SerializeField] private int _damage;
@@ -27,6 +27,7 @@ public class Enemy : MonoBehaviour
             {
                 Attack(_target);
                 _lastAttackTime = _delay;
+                PlaySound(sounds[0]);
             }
         }
 
