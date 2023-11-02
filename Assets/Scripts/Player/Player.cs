@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
 
     private MoverForPC _moverForPC;
     private int _countCollectibles = 0;
+    private int _startHealth = 3;
 
     public int CountCollectibles => _countCollectibles;
 
@@ -51,6 +52,13 @@ public class Player : MonoBehaviour
     {
         Died?.Invoke();
         _moverForPC.enabled = false;
+    }
+
+    public void Resurrect()
+    {
+        _moverForPC.enabled = true;
+        _health = _startHealth;
+        HealthChanged?.Invoke(_health);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
