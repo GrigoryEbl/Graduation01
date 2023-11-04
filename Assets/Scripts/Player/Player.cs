@@ -1,5 +1,4 @@
 using ControllForPC;
-using ControllForPhone;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +10,6 @@ public class Player : MonoBehaviour
     [SerializeField] private ShowerCurrentNumberItems _showerCountItems;
     [SerializeField] private FinalTrigger _finalTrigger;
     [SerializeField] private GameObject _legs;
-    [SerializeField] private PassedScreen _passedScreen;
 
     private MoverForPC _moverForPC;
     private int _countCollectibles = 0;
@@ -31,7 +29,6 @@ public class Player : MonoBehaviour
         _moverForPC = GetComponent<MoverForPC>();
         _showerCountItems = FindObjectOfType<ShowerCurrentNumberItems>();
         _finalTrigger = FindObjectOfType<FinalTrigger>();
-        _passedScreen = FindObjectOfType<PassedScreen>();
 
         _showerCountItems.ShowCountItems(_countCollectibles);
         _legs.SetActive(false);

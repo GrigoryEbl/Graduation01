@@ -11,7 +11,7 @@ public class CalculateScores : MonoBehaviour
 
     private int _score;
     private int _maxScore = 500;
-    private int _minScore = 100;
+    private int _startScore = 100;
 
     private void Awake()
     {
@@ -27,7 +27,7 @@ public class CalculateScores : MonoBehaviour
         if (_countCollectibles.CountCollectibles != 0)
             _score = _maxScore - (time / _countCollectibles.CountCollectibles);
         else
-            _score = _minScore;
+            _score = _startScore;
 
         return _score;
     }

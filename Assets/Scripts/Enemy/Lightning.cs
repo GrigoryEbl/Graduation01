@@ -6,7 +6,7 @@ public class Lightning : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
 
-    private string _animStrike = "Strike";
+    private readonly string _animStrike = "Strike";
 
     private void Awake()
     {

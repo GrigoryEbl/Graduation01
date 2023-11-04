@@ -14146,6 +14146,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 8097316}
   _speed: 5
+  _cameraPositionZ: -10
+  _cameraPositionY: 1
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18332,7 +18334,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.75450873, y: 0.275}
   m_AnchorMax: {x: 0.9078983, y: 0.83300006}
-  m_AnchoredPosition: {x: -8.4, y: 0.44009}
+  m_AnchoredPosition: {x: -8.400002, y: 0.44009018}
   m_SizeDelta: {x: -0.6300001, y: -0.8800001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &761369232
@@ -24354,7 +24356,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -60.1, y: 3.3}
+  m_AnchoredPosition: {x: -60.09999, y: 3.2999992}
   m_SizeDelta: {x: -176.55, y: -25.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1099383295

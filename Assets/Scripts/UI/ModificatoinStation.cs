@@ -8,7 +8,6 @@ public class ModificatoinStation : MonoBehaviour
     [SerializeField] private ParticleSystem _particleSystem;
     [SerializeField] private Animator _animator;
 
-
     private void Start()
     {
         _animator = GetComponent<Animator>();
