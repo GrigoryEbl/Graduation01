@@ -11,13 +11,13 @@ public class PauseMenu : MonoBehaviour
     public void OpenPanel()
     {
         _panel.SetActive(true);
-        Time.timeScale = 0;
+        Time.timeScale = 0f;
     }
 
     public void ClosePanel()
     {
         _panel.SetActive(false);
-        Time.timeScale = 1;
+        Time.timeScale = 1.0f;
     }
 
     public void Restart()

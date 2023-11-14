@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class StartMenu : MonoBehaviour
 {
-    public void StartGameButton()
+    public void PlayGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(Progress.Instance.PassedLevels + 1);
     }
 }

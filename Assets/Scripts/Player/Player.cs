@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        _health = _startHealth;
         HealthChanged?.Invoke(_health);
         _moverForPC = GetComponent<MoverForPC>();
         _showerCountItems = FindObjectOfType<ShowerCurrentNumberItems>();

@@ -36,9 +36,6 @@ public class SaverTest : MonoBehaviour
         integerText.text = string.Empty;
         stringifyText.text = string.Empty;
 
-        integerText.placeholder.GetComponent<Text>().text = YandexGame.savesData.money.ToString();
-        stringifyText.placeholder.GetComponent<Text>().text = YandexGame.savesData.newPlayerName;
-
         for (int i = 0; i < booleanArrayToggle.Length; i++)
             booleanArrayToggle[i].isOn = YandexGame.savesData.openLevels[i];
 

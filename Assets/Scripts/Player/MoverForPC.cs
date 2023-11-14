@@ -46,7 +46,7 @@ namespace ControllForPC
             if (_isGrounded == true)
                 State = States.idle;
 
-            if (Input.GetButton("Jump"))
+            if (Input.GetKey(KeyCode.Space))
                 Jump();
 
             if (Input.GetButton("Horizontal"))
