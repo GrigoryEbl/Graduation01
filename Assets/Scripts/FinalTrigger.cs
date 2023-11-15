@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using YG;
 
 public class FinalTrigger : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class FinalTrigger : MonoBehaviour
         {
             Final?.Invoke();
             _animator.enabled = true;
+            YandexGame.savesData.PassedLevels++;
+            Progress.Instance.PassedLevels++;
+            YandexGame.SaveProgress();
         }
     }
 }

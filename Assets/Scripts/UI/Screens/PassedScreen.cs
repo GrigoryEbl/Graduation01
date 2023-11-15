@@ -24,8 +24,6 @@ public class PassedScreen : MonoBehaviour
 
     public void Activate()
     {
-        Progress.Instance.PassedLevels = + 1;
-
         _passedPanel.SetActive(true);
         _healthBar.SetActive(false);
         _openPauseMenuButton.SetActive(false);

@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class Progress : MonoBehaviour
 {
+    [SerializeField] private TMP_Text _text;
+
     public static Progress Instance;
     public int PassedLevels;
 
@@ -21,5 +23,10 @@ public class Progress : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void FixedUpdate()
+    {
+        _text.text = PassedLevels.ToString();
     }
 }
