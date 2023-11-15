@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
+using YG;
 
 public class Progress : MonoBehaviour
 {
     [SerializeField] private TMP_Text _text;
 
     public static Progress Instance;
-    public int PassedLevels;
 
     private void Awake()
     {
@@ -27,6 +27,8 @@ public class Progress : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _text.text = PassedLevels.ToString();
+        _text.text = "level 1: " + YandexGame.savesData.openLevels[1].ToString() +
+                     "\nlevel 2: " + YandexGame.savesData.openLevels[2].ToString();
+        
     }
 }

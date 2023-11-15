@@ -13,6 +13,5 @@ namespace YG
         public int money = 1;
         public string newPlayerName = "Hello!";
         public bool[] openLevels = new bool[3];
-        public int PassedLevels = 0;
     }
 }
