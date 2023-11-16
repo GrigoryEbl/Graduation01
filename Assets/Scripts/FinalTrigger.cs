@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -21,10 +22,21 @@ public class FinalTrigger : MonoBehaviour
     {
         if (collision.TryGetComponent(out Player player))
         {
-            YandexGame.savesData.openLevels[SceneManager.GetActiveScene().buildIndex] = true; 
-            YandexGame.SaveProgress();
-            Final?.Invoke();
-            _animator.enabled = true;
+            try
+            {
+                YandexGame.savesData.openLevels[SceneManager.GetActiveScene().buildIndex + 1] = true;
+                
+            }
+            catch
+            {
+                YandexGame.savesData.openLevels[SceneManager.GetActiveScene().buildIndex] = true;
+            }
+            finally
+            {
+                YandexGame.SaveProgress();
+                Final?.Invoke();
+                _animator.enabled = true;
+            }
         }
     }
 }
