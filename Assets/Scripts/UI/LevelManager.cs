@@ -7,7 +7,7 @@ using YG;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] private Button[] _buttons;
+    [SerializeField] private GameObject[] _buttons;
 
     private void OnEnable() => YandexGame.GetDataEvent += ChangeOpenLevels;
 
@@ -15,52 +15,36 @@ public class LevelManager : MonoBehaviour
 
     private void Awake()
     {
-        _buttons = GetComponents<Button>();
-
-        print("Open levels: " + YandexGame.savesData.openLevels.Length +
-            "\nlvl0: " + YandexGame.savesData.openLevels[0] +
-            "\nlvl1: " + YandexGame.savesData.openLevels[1] +
-            "\nlvl2: " + YandexGame.savesData.openLevels[2]);
-
         if (YandexGame.SDKEnabled == true)
         {
-            print("SDKEnabled");
-
-            
             ChangeOpenLevels();
+            SetDefaultOpenLevels();
         }
     }
 
-    private void SetOpenLevels()
+    private void SetDefaultOpenLevels()
     {
         YandexGame.savesData.openLevels[0] = true;
         YandexGame.savesData.openLevels[1] = true;
-        YandexGame.savesData.openLevels[2] = false;
     }
 
     public void ChangeOpenLevels()
     {
-        SetOpenLevels();
-        print("SDKEnabled1");
+        SetDefaultOpenLevels();
 
-        for (int i = YandexGame.savesData.openLevels.Length - 1; i >= 0; i--)
+        for (int i = 0; i <= YandexGame.savesData.openLevels.Length - 1; i++)
         {
-            print("SDKEnabled2");
-
             if (YandexGame.savesData.openLevels[i] == false)
             {
-                print("SDKEnabled3");
-                _buttons[i].image.color = Color.black;
-                _buttons[i].interactable = false;
+                _buttons[i].SetActive(false);
             }
         }
     }
 
-    public void RemoveProgress()
+    public void ResetProgress()
     {
         YandexGame.ResetSaveProgress();
-        SetOpenLevels();
-        YandexGame.LoadProgress();
+        SetDefaultOpenLevels();
         YandexGame.SaveProgress();
     }
 
