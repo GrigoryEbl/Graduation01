@@ -10,9 +10,9 @@ public class StartMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        for (int i = YandexGame.savesData.openLevels.Length - 1; i >= 0; i--)
+        for (int i = YandexGame.savesData.OpenedLevels.Length - 1; i >= 0; i--)
         {
-            if (YandexGame.savesData.openLevels[i] == true)
+            if (YandexGame.savesData.OpenedLevels[i] == true)
             {
                 SceneManager.LoadScene(i);
                 break;

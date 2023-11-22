@@ -23,12 +23,12 @@ public class FinalTrigger : MonoBehaviour
         {
             try
             {
-                YandexGame.savesData.openLevels[SceneManager.GetActiveScene().buildIndex + 1] = true;
+                YandexGame.savesData.OpenedLevels[SceneManager.GetActiveScene().buildIndex + 1] = true;
                 
             }
             catch
             {
-                YandexGame.savesData.openLevels[SceneManager.GetActiveScene().buildIndex] = true;
+                YandexGame.savesData.OpenedLevels[SceneManager.GetActiveScene().buildIndex] = true;
             }
             finally
             {

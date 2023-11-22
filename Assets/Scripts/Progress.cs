@@ -27,9 +27,9 @@ public class Progress : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _text.text = "level 0: " + YandexGame.savesData.openLevels[0].ToString() +
-                    "\nlevel 1: " + YandexGame.savesData.openLevels[1].ToString() +
-                     "\nlevel 2: " + YandexGame.savesData.openLevels[2].ToString();
+        _text.text = "level 0: " + YandexGame.savesData.OpenedLevels[0].ToString() +
+                    "\nlevel 1: " + YandexGame.savesData.OpenedLevels[1].ToString() +
+                     "\nlevel 2: " + YandexGame.savesData.OpenedLevels[2].ToString();
         
     }
 }

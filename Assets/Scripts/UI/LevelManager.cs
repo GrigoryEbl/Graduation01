@@ -10,56 +10,48 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] _buttons;
 
-    private void OnEnable() => YandexGame.GetDataEvent += LoadGame;
-
-    private void OnDisable() => YandexGame.GetDataEvent -= LoadGame;
-
     private void Start()
     {
-        if(YandexGame.SDKEnabled)
+        if (YandexGame.SDKEnabled)
         {
-            LoadGame();
+            ChangeOpenedLevels();
         }
     }
 
-    private void SetDefaultOpenLevels()
+    private void OnEnable()
     {
-        for (int i = 0; i <= YandexGame.savesData.openLevels.Length - 1; i++)
-        {
-            YandexGame.savesData.openLevels[i] = false;
-        }
-
-        YandexGame.savesData.openLevels[0] = true;
-        YandexGame.savesData.openLevels[1] = true;
+        YandexGame.GetDataEvent += ChangeOpenedLevels;
     }
 
-    public void ChangeOpenedLevels()
+    private void OnDisable()
     {
-        for (int i = 0; i <= YandexGame.savesData.openLevels.Length - 1; i++)
-        {
-            if (YandexGame.savesData.openLevels[i] == true)
-            {
-                _buttons[i].SetActive(true);
-            }
-        }
+        YandexGame.GetDataEvent -= ChangeOpenedLevels;
     }
 
     public void ResetProgress()
     {
         YandexGame.ResetSaveProgress();
-        SetDefaultOpenLevels();
         ChangeOpenedLevels();
         YandexGame.SaveProgress();
     }
 
-    private void LoadGame()
+    public void ChangeOpenedLevels()
     {
-        ChangeOpenedLevels();
-
-        if (YandexGame.savesData.isFirstSession)
+        for (int i = 0; i < YandexGame.savesData.OpenedLevels.Length; i++)
         {
-            ResetProgress();
-            ChangeOpenedLevels();
+            if (YandexGame.savesData.OpenedLevels[i] == true)
+            {
+                _buttons[i].SetActive(true);
+            }
+            else
+            {
+                _buttons[i].SetActive(false);
+            }
         }
+    }
+
+    public void LoadSelectedLevel(int number)
+    {
+        SceneManager.LoadScene(number);
     }
 }

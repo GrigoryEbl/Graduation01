@@ -773,7 +773,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 187, y: -169}
+  m_AnchoredPosition: {x: 432.74, y: -169}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &466166522
@@ -918,7 +918,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1552948066}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: LoadLevel
+        m_MethodName: LoadSelectedLevel
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1016,7 +1016,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 187, y: -169}
+  m_AnchoredPosition: {x: 188, y: -169}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &500169457
@@ -1161,7 +1161,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1552948066}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: LoadLevel
+        m_MethodName: LoadSelectedLevel
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1818,7 +1818,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3157483472541429372, guid: caf9732433f4dc044845763962493607, type: 3}
       propertyPath: pauseType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3157483472541429372, guid: caf9732433f4dc044845763962493607, type: 3}
       propertyPath: pauseMethod
@@ -1911,7 +1911,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.85
+  m_fontSize: 24.9
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2016,7 +2016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 87
+    m_Left: 88
     m_Right: 0
     m_Top: 69
     m_Bottom: 0
@@ -2625,19 +2625,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1552948066}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: ChangeOpenLevels
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1552948066}
-        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: ShowLogOpenLVL
+        m_MethodName: ChangeOpenedLevels
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2906,7 +2894,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.034, y: 0.08400001}
   m_AnchorMax: {x: 1, y: 0.892}
-  m_AnchoredPosition: {x: -30.100647, y: 328.70996}
+  m_AnchoredPosition: {x: -30.100708, y: 328.70996}
   m_SizeDelta: {x: -958.66, y: -638.88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1254640938
@@ -3716,7 +3704,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -155, y: -32}
+  m_AnchoredPosition: {x: -154.99997, y: -32}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1697354396
