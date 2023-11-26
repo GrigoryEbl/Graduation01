@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3583848413742812735}
   - component: {fileID: 6092649988392254454}
   - component: {fileID: 621381078717381846}
+  - component: {fileID: 8934636217246313761}
   m_Layer: 5
   m_Name: Heart
   m_TagString: Untagged
@@ -110,3 +111,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &8934636217246313761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7518043014352817200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8faf3b46497cf014aa07a4c1b10ea436, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

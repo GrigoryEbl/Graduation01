@@ -74,7 +74,7 @@ namespace ControllForPC
         }
 
         private void Jump()
-        {
+        { 
             if (_isGrounded == true)
                 _body.velocity = new Vector2(_body.velocity.x, _jumpForce);
 
