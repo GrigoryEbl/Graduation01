@@ -4,13 +4,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 
 public class PassedScreen : MonoBehaviour
 {
     [SerializeField] private GameObject _passedPanel;
     [SerializeField] private CalculateScores _calculateScores;
-    [SerializeField] private TMP_Text _text;
+    [SerializeField] private Text _text;
     [SerializeField] private GameObject _healthBar;
     [SerializeField] private GameObject _openPauseMenuButton;
     [SerializeField] private GameObject _showCollectIblesPanel;
@@ -30,7 +30,7 @@ public class PassedScreen : MonoBehaviour
         _showCollectIblesPanel.SetActive(false);
         _score = _calculateScores.Calculate();
 
-        _text.text = "Score: " + _score.ToString();
+        _text.text = "Очки: " + _score.ToString();
     }
 
     public void LoadNextLevel()
